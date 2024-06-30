@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*color: whitesmoke; /* To delete */
+    /*font-family: sans-serif; /* To delete */
+    /*background-color: #161616; /* To delete */
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Regular";
+    src: url("./polices/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Thin";
+    src: url("./polices/RobotoCondensed-Thin.ttf");
+}
+
+@font-face {
+    font-family: "RobotoCondensed-SemiBold";
+    src: url("./polices/RobotoCondensed-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "RobotoCondensed-ExtraLight";
+    src: url("./polices/RobotoCondensed-ExtraLight.ttf");
+}
+
+header, footer {
+    background-color: #161616;
+}
+
+header {
+    position: sticky;
+}
+
+body {
+    background-color: #1c1a1a;
+}
+
+footer {
+    color: #faffe6ff;
+    font-family: "RobotoCondensed-Regular";
+    font-size: 1.7em;
+    height: 4em;
+    margin-top: 6em;
+}
+
+main, .quotes, footer, .quote, .quote-like, .result-nbr, .change-infos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quotes {
+    gap: 4em;
+}
+
+.banner {
+    color: #829e92ff;
+    height: 1.8em;
+    font-size: 1.8em;
+    font-family: "RobotoCondensed-SemiBold";
+    padding-top: 0.5em;
+    padding-left: 0.2em;
+}
+
+
+.quote {
+    background: #F7FFDD; /* linear-gradient(#F7FFDD 39%) */
+    width: 50%;
+    height: 20em;
+    border-radius: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.quote-like {
+    margin-right: 89%;
+    margin-bottom: 1.5em;
+    flex-direction: row;
+    gap: 0.2em;
+}
+
+.likes {
+    display: block;
+    color: #1c1a1a;
+}
+
+.quote-author {
+    margin-top: 1.5em;
+    margin-left: 80%;
+}
+
+.quote-detail {
+    background: linear-gradient(#F7FFDD 39%);
+}
+
+.button {
+    background-color: #829e92ff;
+    color: #f4fae1ff;
+    font-family: "RobotoCondensed-Regular";
+}
+
+.button-warn {
+    background: linear-gradient(#991D1D 47%);
+}
+
+.logo {
+    color: #C6EB88;
+    font-weight: bold;
+    font-family: "RobotoCondensed-Regular";
+    font-size: 4em;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.outside {
+    justify-content: center;
+}
+
+form, .sign-in-you-are span, .my-citations span {
+    /*background-color: #d9d9d9ff;*/
+    color: #1c1a1a;
+    font-family: "RobotoCondensed-Thin";
+}
+
+
+.search {
+    margin-top: 5em;
+    height: 2.3em;
+}
+
+
+[type="search"] {
+    width: 35em;
+    height: 2.8em;
+}
+
+center hr {
+    width: 70vw;
+    margin-top: 8em;
+}
+
+hr {
+    width: 99.9vw;
+    height: 2px;
+    background-color: #d9d9d9ff;
+    border-style: none;
+}
+
+nav img {
+    width: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.quote .quote-like img {
+    width: 1.6em;
+}
+
+.day {
+    margin-top: 5em;
+}
+
+label, .sign-in-you-are span, .my-citations span {
+    position: absolute;
+    margin-left: 2em;
+    font-size: 1.4em;
+    transform: translateX(3px);
+    transform: translateY(0.3em);
+}
+
+[class^="login"] label {
+    margin-top: 0.4em;
+    transform: translateX(6em);
+}
+
+.sign-in-you-are span, [class^="sign-in"] label, .my-citations span {
+    margin-top: 0.28em;
+    transform: translateX(5em);
+}
+
+[class^="sign-in"] label {
+    transform: translateX(7.2em);   
+}
+
+.sign-in-password label {
+    transform: translateX(6.6em);  
+}
+
+.login-email label {
+    transform: translateX(6.7em);
+}
+
+.cta {
+    background-color: #829e92ff;
+    color: #faffe6;
+    font-weight: bold;
+    font-family: "RobotoCondensed-Regular";
+    font-size: 1.5em;
+    border-radius: 2em;
+    border-style: none;
+    height: 50px;
+    width: 135px;
+    position: fixed;
+    top: 10em;
+    left: 2em;
+}
+
+.result-nbr {
+    background-color: #d9d9d9ff;
+    color: #161616;
+    margin-top: 6em;
+    width: 30%;
+    height: 1.8em;
+    font-size: 1.3em;
+    font-family: "RobotoCondensed-ExtraLight";
+}
+
+.sep-result {
+    margin-top: 0;
+}
+/*
+.menu {
+    /*transform: rotate(90deg);**
+}
+*/
+center + form {
+    margin-top: 6em;
+}
+
+.change-infos {
+    gap: 3.4em;
+}
+
+.change-infos input, .change-infos select, .del-account, .my-citations select {
+    height: 2.8em;
+    width: 35em;
+}
+
+input[name="choose-avatar"], .del-account, .res-sub input, .one-click, .profil-update {
+    background-color: #829e92ff;
+    color: #faffe6;
+    font-weight: bold;
+    font-family: "RobotoCondensed-Regular";
+    font-size: 1.5em;
+    border-radius: 2em;
+    border-style: none;
+    height: 2.4em;
+    width: 20em;
+    text-align: center;
+}
+
+.del-account {
+    height: 3em;
+    border-radius: 1.1em;
+    background-color: #991D1D;
+    border-style: none;
+}
+
+.res-sub {
+    display: flex;
+    justify-content: space-between;
+    gap: 14em;
+}
+
+.res-sub input, .profil-update {
+    height: 1.8em;
+    width: 5.2em;
+}
+
+span, span a {
+    color: white;
+    font-family: "RobotoCondensed-Regular";
+}
+
+span a {
+    text-decoration-color: #829e92ff;
+    text-decoration-style: solid;
+}
+
+.profil {
+    margin-top: 8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4em;
+}
+
+.profil img {
+    border-radius: 100%;
+}
+
+.profil-update {
+    margin-top: 10em;
+}
+
+.profil-detail {
+    margin-top: 6em;
+    display: grid;
+    grid-template-columns: 6em 6em ;
+}
+
+.profil-detail .profil-subject {
+    font-family: "RobotoCondensed-SemiBold";
+    font-size: 1.3em;
+    color: #faffe6;
+}
+
+.profil-detail .profil-subject-detail {
+    font-family: "RobotoCondensed-Regular";
+    font-size: 1.3em;
+    color: #faffe6;
+}
