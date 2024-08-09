@@ -1,9 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    /*color: whitesmoke; /* To delete */
-    /*font-family: sans-serif; /* To delete */
-    /*background-color: #161616; /* To delete */
 }
 
 @font-face {
@@ -24,6 +21,16 @@
 @font-face {
     font-family: "RobotoCondensed-ExtraLight";
     src: url("./polices/RobotoCondensed-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "SailRegular";
+    src: url("./polices/SailRegular.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./polices/Inter.ttf");
 }
 
 header, footer {
@@ -68,7 +75,7 @@ main, .quotes, footer, .quote, .quote-like, .result-nbr, .change-infos {
 
 
 .quote {
-    background: #F7FFDD; /* linear-gradient(#F7FFDD 39%) */
+    background: linear-gradient(#F7FFDD, #828B67 39%); /* linear-gradient(#F7FFDD 39%) */
     width: 50%;
     height: 20em;
     border-radius: 2em;
@@ -85,26 +92,52 @@ main, .quotes, footer, .quote, .quote-like, .result-nbr, .change-infos {
 
 .likes {
     display: block;
-    color: #1c1a1a;
+    color: #991D1D;
+    font-style: italic;
 }
 
 .quote-author {
     margin-top: 1.5em;
     margin-left: 80%;
+    font-style: italic;
+    color: #F7FFDD;
+    font-family: "Inter";
 }
 
 .quote-detail {
-    background: linear-gradient(#F7FFDD 39%);
+    margin-left: 0.2em;
+    font-style: italic;
+    color: #829e92ff;
+    text-decoration: underline;
 }
 
-.button {
+button {
     background-color: #829e92ff;
     color: #f4fae1ff;
     font-family: "RobotoCondensed-Regular";
+    font-weight: bold;
+    border-style: none;
+}
+
+
+.button-cta {
+    font-size: 1.5em;
+    border-radius: 2em;
+    height: 50px;
+    width: 135px;
+    position: fixed;
+    top: 10em;
+    left: 2em;
 }
 
 .button-warn {
-    background: linear-gradient(#991D1D 47%);
+    background: linear-gradient(-85deg, #330a0a 55%, #991d1d);
+    height: 3em;
+    border-radius: 1.1em;
+}
+
+.button-warn:hover {
+    background: radial-gradient(#330a0a 47%, #991d1d);
 }
 
 .logo {
@@ -157,15 +190,21 @@ hr {
 
 nav img {
     width: 3em;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 0em 1em 0em 1em;
 }
 
 .quote .quote-like img {
     width: 1.6em;
 }
 
-.day {
+.quote-content {
+    font-family: "SailRegular";
+    color: #f7ffdd;
+    padding: 0em 2.5em 0em 2.5em;
+    font-size: x-large;
+}
+
+.day/* .quote */ {
     margin-top: 5em;
 }
 
@@ -199,21 +238,6 @@ label, .sign-in-you-are span, .my-citations span {
     transform: translateX(6.7em);
 }
 
-.cta {
-    background-color: #829e92ff;
-    color: #faffe6;
-    font-weight: bold;
-    font-family: "RobotoCondensed-Regular";
-    font-size: 1.5em;
-    border-radius: 2em;
-    border-style: none;
-    height: 50px;
-    width: 135px;
-    position: fixed;
-    top: 10em;
-    left: 2em;
-}
-
 .result-nbr {
     background-color: #d9d9d9ff;
     color: #161616;
@@ -227,12 +251,8 @@ label, .sign-in-you-are span, .my-citations span {
 .sep-result {
     margin-top: 0;
 }
-/*
-.menu {
-    /*transform: rotate(90deg);**
-}
-*/
-center + form {
+
+center + form /* on login page */ {
     margin-top: 6em;
 }
 
@@ -245,7 +265,7 @@ center + form {
     width: 35em;
 }
 
-input[name="choose-avatar"], .del-account, .res-sub input, .one-click, .profil-update {
+input[name="choose-avatar"], .button-warn, .res-sub input, .one-click, .profil-update {
     background-color: #829e92ff;
     color: #faffe6;
     font-weight: bold;
@@ -256,13 +276,6 @@ input[name="choose-avatar"], .del-account, .res-sub input, .one-click, .profil-u
     height: 2.4em;
     width: 20em;
     text-align: center;
-}
-
-.del-account {
-    height: 3em;
-    border-radius: 1.1em;
-    background-color: #991D1D;
-    border-style: none;
 }
 
 .res-sub {
@@ -285,6 +298,8 @@ span a {
     text-decoration-color: #829e92ff;
     text-decoration-style: solid;
 }
+
+/* for profil.html only */
 
 .profil {
     margin-top: 8em;
