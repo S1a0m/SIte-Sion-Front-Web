@@ -191,6 +191,7 @@ hr {
 nav img {
     width: 3em;
     padding: 0em 1em 0em 1em;
+    cursor: pointer;
 }
 
 .quote .quote-like img {
@@ -212,6 +213,7 @@ label, .sign-in-you-are span, .my-citations span {
     position: absolute;
     margin-left: 2em;
     font-size: 1.4em;
+   /* letter-spacing: 0.2em;*/
     transform: translateX(3px);
     transform: translateY(0.3em);
 }
@@ -334,3 +336,7 @@ span a {
     font-size: 1.3em;
     color: #faffe6;
 }
+/*
+me-nu {
+    display: none;
+}*/

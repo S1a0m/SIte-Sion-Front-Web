@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/index.js"></script>
     <title>Settings</title>
 </head>
 <body>
     <div>
+        <me-nu active="settings" show="no"></me-nu>
         <header>
             <div class="banner">
                 Settings
             </div>
             <hr>
             <nav>
-                <img src="../icons/menu-c.svg" alt="">
+                <img src="../icons/menu-c.svg" alt="" class="menu-sky">
                 <span class="logo">Cite@Sion</span>
                 <img src="../icons/logout-c.svg" alt="">
             </nav>
@@ -47,7 +47,7 @@
                     <input type="file" name="choose-avatar" id="choose-avatar">
                     <div class="res-sub">
                         <input type="reset" value="Cancel">
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Update">
                     </div>
                     <button class="button-warn" type="button">
                         Supprimer votre compte
@@ -59,5 +59,7 @@
             Copyright 2024 - Cite À Sion
         </footer>
     </div>
+    <script src="../js/index.js"></script>
+    <script type="module" src="../js/menu.js"></script>
 </body>
 </html>

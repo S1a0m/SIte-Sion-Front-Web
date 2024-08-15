@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/index.js"></script>
     <title>Home</title>
 </head>
 <body>
     <div>
+        <me-nu active="home" show="no"></me-nu>
         <header>
             <div class="banner">
                 Home
             </div>
             <hr>
             <nav>
-                <img src="../icons/menu-c.svg" alt="">
+                <img src="../icons/menu-c.svg" alt="" class="menu-sky">
                 <span class="logo">Cite@Sion</span>
                 <img src="../icons/logout-c.svg" alt="">
             </nav>
@@ -124,11 +124,13 @@
                     </div>
                 </article>
             </section>
+            <button class="button-cta">Add new</button>
         </main>
-        <button class="button-cta">Add new</button>
         <footer>
             Copyright 2024 - Cite À Sion
         </footer>
     </div>
+    <script src="../js/index.js"></script>
+    <script type="module" src="../js/menu.js"></script>
 </body>
 </html>
