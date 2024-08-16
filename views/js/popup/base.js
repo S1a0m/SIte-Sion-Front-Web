@@ -1,27 +1,40 @@
-class PopUpBase extends HTMLElement {
+export class PopUpBase extends HTMLElement {
     constructor() {
       super();
       this.attachShadow({
         mode: "open"
-      })
+      });
     }
   
     connectedCallback() {
       this.html();
       this.style();
-      this.script();
+      this.closePopup();
+    }
+
+    static get observedAttributes() {
+      return ["type"];
     }
   
+    attributeChangedCallback(name, oldValue, newValue) {
+      if(name === "type") {
+        this.html();
+      }
+    }
 
     html() {
+      let popupType = this.getAttribute("type");
+      let content = this.getAttribute("content");
       this.shadowRoot.innerHTML = `
       <div class="container">
-        <div class="close">×</div>
-        <div class="menu">
-          <span><a href="" class="not-active"><span class="first-letter">H</span>ome</a></span>
-          <span><a href="" class="not-active"><span class="first-letter">M</span>y Quotes</a></span>
-          <span><a href="" class="not-active"><span class="first-letter">S</span>ettings</a></span>
-          <span><a href="" class="not-active"><span class="first-letter">P</span>rofil</a></span>
+        <div class="head">
+        <span class="popup-title">${popupType}</span><span class="close">×</span>
+        </div>
+        <div class="content">
+        <hr>
+          <div class="main">
+          ${content}
+          </div>
         </div>
       </div>
       `;
@@ -30,66 +43,73 @@ class PopUpBase extends HTMLElement {
     style() {
       var style = document.createElement("style");
       style.textContent = `
-      .container {
-        background: #1c1a1a;
-        height: 80vh;
-        width: 18vw;
-        padding-left: 3em;
-        padding-top: 0.1em;
-      }
+        .popup-title {
+          color: #829e92ff;
+          font-family: sans-serif;
+          font-size: 1.8em;
+          text-decoration: none;
+        }
 
-      a::after {
-        content: "|";
-        margin-left: 4em;
-      }
+        hr {
+            width: 53em;
+            height: 3px;
+            background-color: #faffe6;
+            border-style: none;
+            position: relative;
+        }
 
-      .menu {
-        display: flex;
-        flex-direction: column;
-        gap: 0.8em;
-        padding-top: 7em;
-      }
+        .main {
+          color: white;
+          padding: 4em 3em 0em 3em;
+        }
 
-      .close {
-        padding-top: 0.1em;
-        margin-left: 6em;
-        cursor: pointer;
-        color: #d9d9d9ff;
-        font-size: 3em;
-        width: 1em;
-        font-weight: bold;
-      }
+        .container {
+          background: #1c1a1a;
+          height: 53em;
+          width: 53em;
+          padding-top: 0.1em;
+          /*position: fixed;*/
+          z-index: 2;
+          border-style: solid;
+          border-color: #faffe6;
+          border-width: 0.64em;
+        }
 
-      .close:hover {
-        color: #829e92ff;
-      }
+        .head {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 8em;
+        }
 
-      .first-letter {
-        text-decoration: underline;
-      }
-      
-      a {
-        color: #829e92ff;
-        font-family: sans-serif;
-        font-size: 1.8em;
-        text-decoration: none;
-      }
+        .head span {
+          display: block;
+        }
 
-      .not-active:hover {
-        background: #d9d9d9ff;
-      }
+        .popup-title {
+          margin-left: 0.5em;
+        }
 
+        .close {
+          cursor: pointer;
+          color: #d9d9d9ff;
+          font-size: 3em;
+          width: 1em;
+          font-weight: bold;
+        }
+
+        .close:hover {
+          color: #829e92ff;
+        }
       `;
       this.shadowRoot.appendChild(style);
     }
 
-    script() {
+    closePopup() {
       this.shadowRoot.querySelector(".close").addEventListener("click", ()=> {
         var menu = this.shadowRoot.querySelector(".container");
         menu.style = "display: none;"
       });
-
-      this
     }
   }
   

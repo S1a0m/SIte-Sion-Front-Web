@@ -109,6 +109,7 @@ main, .quotes, footer, .quote, .quote-like, .result-nbr, .change-infos {
     font-style: italic;
     color: #829e92ff;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 button {
@@ -117,6 +118,7 @@ button {
     font-family: "RobotoCondensed-Regular";
     font-weight: bold;
     border-style: none;
+    cursor: pointer;
 }
 
 
@@ -336,7 +338,3 @@ span a {
     font-size: 1.3em;
     color: #faffe6;
 }
-/*
-me-nu {
-    display: none;
-}*/
