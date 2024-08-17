@@ -10,15 +10,19 @@ export class PopUpBase extends HTMLElement {
       this.html();
       this.style();
       this.closePopup();
+      this.renderPopup();
     }
 
     static get observedAttributes() {
-      return ["type"];
+      return ["type", "content", "show"];
     }
   
     attributeChangedCallback(name, oldValue, newValue) {
       if(name === "type") {
         this.html();
+      }
+      if(name === "show") {
+        this.renderPopup();
       }
     }
 
@@ -26,17 +30,17 @@ export class PopUpBase extends HTMLElement {
       let popupType = this.getAttribute("type");
       let content = this.getAttribute("content");
       this.shadowRoot.innerHTML = `
-      <div class="container">
-        <div class="head">
-        <span class="popup-title">${popupType}</span><span class="close">×</span>
-        </div>
-        <div class="content">
-        <hr>
-          <div class="main">
-          ${content}
+        <div class="container">
+          <div class="head">
+          <span class="popup-title">${popupType}</span><span class="close">×</span>
+          </div>
+          <div class="content">
+          <hr>
+            <div class="main">
+            ${content}
+            </div>
           </div>
         </div>
-      </div>
       `;
     }
 
@@ -68,11 +72,17 @@ export class PopUpBase extends HTMLElement {
           height: 53em;
           width: 53em;
           padding-top: 0.1em;
-          /*position: fixed;*/
-          z-index: 2;
+          position: fixed;
+          margin: 2em 0em 0em 32.9em;
+          z-index: 4;
           border-style: solid;
           border-color: #faffe6;
           border-width: 0.64em;
+          /*transition: all 300ms ease-in-out;*/
+        }
+
+        .container:hover {
+          border-color: #829e92ff;
         }
 
         .head {
@@ -105,10 +115,33 @@ export class PopUpBase extends HTMLElement {
       this.shadowRoot.appendChild(style);
     }
 
+    showPopup(param) {
+      var menu = this.shadowRoot.querySelector(".container");
+      if(param === "no") {
+        menu.style = "display: none;";
+        this.setAttribute("show", param);
+        document.querySelector("#body").setAttribute("style", "filter: blur(0px);");
+      }
+      else if(param === "yes") {
+        menu.style = "display: block;";
+        this.setAttribute("show", param);
+        document.querySelector("#body").setAttribute("style", "filter: blur(3px); pointer-events: none;");
+      }
+    }
+
+    renderPopup() {
+      let show = this.getAttribute("show");
+      if(show === "no") {
+        this.showPopup(show);
+      }
+      else if(show === "yes") {
+        this.showPopup(show);
+      }
+    }
+
     closePopup() {
       this.shadowRoot.querySelector(".close").addEventListener("click", ()=> {
-        var menu = this.shadowRoot.querySelector(".container");
-        menu.style = "display: none;"
+        this.showPopup("no");
       });
     }
   }

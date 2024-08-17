@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/index.js"></script>
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+    <!--<script src="../js/index.js"></script>-->
     <title>Login</title>
 </head>
 <body>
-    <div>
+    <recov-pass show="no"></recov-pass>
+    <div id="body">
         <header>
             <div class="banner">
                 Login
@@ -23,12 +25,12 @@
             <form action="" method="post">
                 <div class="change-infos">
                     <div class="login-email">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
+                        <!--<label for="email">Email</label>-->
+                        <input type="email" name="email" id="email" placeholder="Email">
                     </div>
                     <div class="login-password">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
+                        <!--<label for="password">Password</label>-->
+                        <input type="password" name="password" id="password" placeholder="Password">
                     </div>
                     <div class="res-sub">
                         <input type="reset" value="Reset">
@@ -38,7 +40,7 @@
                     <button class="one-click" type="button">
                         Connectez-vous en un clic
                     </button>
-                    <span><a href="">Mot de passe oublié?</a></span>
+                    <span class="recov-pass">Mot de passe oublié?</span>×
                 </div>
             </form>
         </main>
@@ -46,5 +48,12 @@
             Copyright 2024 - Cite À Sion
         </footer>
     </div>
+    <script src="../js/index.js"></script>
+    <script type="module" src="../js/popup/forgotpass.js"></script>
+    <script>
+        document.querySelector(".recov-pass").addEventListener("click", ()=> {
+            document.querySelector("recov-pass").setAttribute("show", "yes");
+        });
+    </script>
 </body>
 </html>

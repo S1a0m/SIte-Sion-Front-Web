@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
     <title>Home</title>
 </head>
 <body>
-    <div>
-        <me-nu active="home" show="no"></me-nu>
+    <add-new show="no"></add-new>
+    <about-quote show="no"></about-quote>
+    <com-ments show="no"></com-ments>
+    <div id="body">
+        <me-nu active="home"></me-nu>
         <header>
             <div class="banner">
                 Home
@@ -23,8 +27,8 @@
         <main>
             <form action="" method="get" class="search">
                 <div class="home-search">
-                    <label for="search">Rechercher ...</label>
-                    <input type="search" name="search" id="search">
+                    <!--<label for="search">Rechercher ...</label>-->
+                    <input type="search" name="search" id="search" placeholder="Rechercher...">
                     <!--<img src="../icons/search.svg" alt="">-->
                 </div>
             </form>
@@ -47,11 +51,12 @@
                             About
                             web que usan este texto si se encuentran en
                             estado de desarrollo. Muchas versiones han
-                            evolucionado a través de los año <span class="quote-detail">see more ...</span>
+                            evolucionado a través de los año <span id="quote-detail">see more ...</span>
                     </div>
                     <div class="quote-author">
                             Newton
                     </div>
+                    <img src="../icons/comment.svg" alt="" id="comment">
                 </article>
                 <hr>
                 <article class="quote">
@@ -71,7 +76,7 @@
                             About
                             web que usan este texto si se encuentran en
                             estado de desarrollo. Muchas versiones han
-                            evolucionado a través de los año<span class="quote-detail">see more ...</span>
+                            evolucionado a través de los año.
                     </div>
                     <div class="quote-author">
                             Newton
@@ -94,7 +99,7 @@
                             About
                             web que usan este texto si se encuentran en
                             estado de desarrollo. Muchas versiones han
-                            evolucionado a través de los año<span class="quote-detail">see more ...</span>
+                            evolucionado a través de los año.
                     </div>
                     <div class="quote-author">
                             Newton
@@ -117,14 +122,14 @@
                             About
                             web que usan este texto si se encuentran en
                             estado de desarrollo. Muchas versiones han
-                            evolucionado a través de los año<span class="quote-detail">see more ...</span>
+                            evolucionado a través de los año.
                     </div>
                     <div class="quote-author">
                             Newton
                     </div>
                 </article>
             </section>
-            <button class="button-cta">Add new</button>
+            <button class="button-cta" type="button">Add new</button>
         </main>
         <footer>
             Copyright 2024 - Cite À Sion
@@ -132,5 +137,21 @@
     </div>
     <script src="../js/index.js"></script>
     <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/popup/publish.js"></script>
+    <script type="module" src="../js/popup/about.js"></script>
+    <script type="module" src="../js/popup/comments.js"></script>
+    <script>
+        document.querySelector(".button-cta").addEventListener("click", ()=> {
+            document.querySelector("add-new").setAttribute("show", "yes");
+        });
+
+        document.querySelector("#quote-detail").addEventListener("click", ()=> {
+            document.querySelector("about-quote").setAttribute("show", "yes");
+        });
+
+        document.querySelector("#comment").addEventListener("click", ()=> {
+            document.querySelector("com-ments").setAttribute("show", "yes");
+        });
+    </script>
 </body>
 </html>

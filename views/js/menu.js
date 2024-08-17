@@ -25,10 +25,10 @@ class MeNu extends HTMLElement {
     if(name === "show") {
       var show = this.getAttribute("show");
       if(show === "no") {
-        this.showMenu("no");
+        this.showMenu(show);
       }
       else if(show === "yes") {
-        this.showMenu("yes");
+        this.showMenu(show);
       }
     }
   }
@@ -66,6 +66,10 @@ class MeNu extends HTMLElement {
     @font-face {
       font-family: "RobotoCondensed-Regular";
       src: url("./polices/RobotoCondensed-Regular.ttf");
+    }
+
+    .container:hover {
+      border-color: #829e92ff;
     }
 
     .container {
@@ -115,6 +119,10 @@ class MeNu extends HTMLElement {
       font-family: "RobotoCondensed-Regular";
       font-size: 1.8em;
       text-decoration: none;
+    }
+
+    .not-active {
+      transition: all 250ms ease-in-out;
     }
 
     .not-active:hover {

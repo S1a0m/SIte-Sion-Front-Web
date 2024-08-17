@@ -17,16 +17,17 @@ class RecovPass extends PopUpBase {
                     <input type="email" placeholder="Enter your mail here" class="email">
                     <input type="submit" value="Submit">
                 <div>
-                <p>
-                    If this email exists, you'll get a recorvery link soon. 
-                    Check it on your box.
-                <p>
             </form>
+            <p>
+                If this email exists, you'll get a recorvery link soon. 
+                Check it on your box.
+            <p>
         `
         this.setAttribute("type", "Forgotten Password");
         this.setAttribute("content", content);
         super.html();
         super.closePopup();
+        super.renderPopup();
         this.updateStyle();
     }
 

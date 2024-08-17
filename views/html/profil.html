@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
     <title>Profil</title>
 </head>
 <body>
     <div>
-        <me-nu active="profil" show="no"></me-nu>
+        <me-nu active="profil"></me-nu>
         <header>
             <div class="banner">
                 Profil
@@ -41,5 +42,10 @@
     </div>
     <script src="../js/index.js"></script>
     <script type="module" src="../js/menu.js"></script>
+    <script>
+        document.querySelector(".profil-update").addEventListener("click", ()=> {
+            window.location.href = "./settings.html";
+        });
+    </script>
 </body>
 </html>

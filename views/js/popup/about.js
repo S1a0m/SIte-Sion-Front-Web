@@ -36,6 +36,7 @@ class AboutQuote extends PopUpBase {
         this.setAttribute("content", content);
         super.html();
         super.style();
+        super.renderPopup();
         super.closePopup();
     }
 }

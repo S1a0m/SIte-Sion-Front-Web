@@ -52,6 +52,7 @@ class ComMents extends PopUpBase {
         this.setAttribute("content", content);
         super.html();
         super.closePopup();
+        super.renderPopup();
         this.updateStyle();
     }
 

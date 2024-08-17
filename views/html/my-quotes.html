@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
     <title>My Quotes</title>
 </head>
 <body>
-    <div>
-        <me-nu active="my-quotes" show="no"></me-nu>
+    <add-new show="no"></add-new>
+    <div id="body">
+        <me-nu active="my-quotes"></me-nu>
         <header>
             <div class="banner">
                 My Quotes
@@ -127,13 +129,20 @@
                     </div>
                 </article>
             </section>
-            <button class="button-cta">Add new</button>
+            <button class="button-cta" type="button">Add new</button>
         </main>
         <footer>
             Copyright 2024 - Cite À Sion
         </footer>
     </div>
+    <add-new></add-new>
     <script src="../js/index.js"></script>
     <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/popup/publish.js"></script>
+    <script>
+        document.querySelector(".button-cta").addEventListener("click", ()=> {
+            document.querySelector("add-new").setAttribute("show", "yes");
+        });
+    </script>
 </body>
 </html>

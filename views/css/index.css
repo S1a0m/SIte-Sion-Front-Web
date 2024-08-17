@@ -104,7 +104,7 @@ main, .quotes, footer, .quote, .quote-like, .result-nbr, .change-infos {
     font-family: "Inter";
 }
 
-.quote-detail {
+#quote-detail {
     margin-left: 0.2em;
     font-style: italic;
     color: #829e92ff;
@@ -128,6 +128,7 @@ button {
     height: 50px;
     width: 135px;
     position: fixed;
+    z-index: 1;
     top: 10em;
     left: 2em;
 }
@@ -210,15 +211,15 @@ nav img {
 .day/* .quote */ {
     margin-top: 5em;
 }
-
+/*
 label, .sign-in-you-are span, .my-citations span {
     position: absolute;
     margin-left: 2em;
     font-size: 1.4em;
    /* letter-spacing: 0.2em;*/
-    transform: translateX(3px);
-    transform: translateY(0.3em);
-}
+    /*transform: translateX(3px);
+    transform: translateY(0.3em);*/
+/*}
 
 [class^="login"] label {
     margin-top: 0.4em;
@@ -240,7 +241,7 @@ label, .sign-in-you-are span, .my-citations span {
 
 .login-email label {
     transform: translateX(6.7em);
-}
+}*/
 
 .result-nbr {
     background-color: #d9d9d9ff;
@@ -298,7 +299,12 @@ span, span a {
     font-family: "RobotoCondensed-Regular";
 }
 
-span a {
+.recov-pass {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+span a, .recov-pass {
     text-decoration-color: #829e92ff;
     text-decoration-style: solid;
 }
@@ -338,3 +344,12 @@ span a {
     font-size: 1.3em;
     color: #faffe6;
 }
+
+#comment {
+    cursor: pointer;
+    margin-right: 50em;
+}
+/*
+input:placeholder-shown, input:focus {
+    font-size: 1em;
+}*/
