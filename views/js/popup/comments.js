@@ -19,7 +19,7 @@ class ComMents extends PopUpBase {
                     <div class="comments">
                         <div class="details">
                             <div class="author">
-                                <span><b>Tony</b> <img src="../icons/favorite-c.svg" alt=""> 25k</span>
+                                <span><b>Tony</b> <span class="like">&#9829;</span> 25k</span>
                                 <p>
                                     I’m so happy about this citation.
                                     It ’s so, very great.Es un hecho establecido hace demasiado
@@ -29,14 +29,14 @@ class ComMents extends PopUpBase {
                                 </p>
                             </div>
                             <div class="author">
-                                <span><b>Sonia</b> <img src="../icons/favorite-c.svg" alt=""> 25k</span>
+                                <span><b>Sonia</b> <span class="like">&#9829;</span> 25k</span>
                                 <p>
                                     I’m so happy about this citation.
                                     It ’s so, very great .
                                 </p>
                             </div>
                             <div class="author">
-                                <span><b>Tima</b> <img src="../icons/favorite-c.svg" alt=""> 25k</span>
+                                <span><b>Tima</b> <span class="like">&#9829;</span> 25k</span>
                                 <p>
                                     I’m so happy about this citation.
                                     It ’s so, very great .
@@ -74,8 +74,9 @@ class ComMents extends PopUpBase {
                 cursor: pointer;
             }
 
-            img {
-                width: 1em;
+            .like  {
+                font-size: 1.4em;
+                color: #ffffff;
                 cursor: pointer;
             }
 

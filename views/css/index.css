@@ -192,13 +192,26 @@ hr {
 }
 
 nav img {
-    width: 3em;
-    padding: 0em 1em 0em 1em;
+    width: 2.9em;
+    padding: 0em 1em 0em 0.2em;
     cursor: pointer;
 }
 
-.quote .quote-like img {
-    width: 1.6em;
+.menu-sky {
+    color: #d9d9d9;
+    font-size: 4em;
+    padding: 0em 0em 0.3em 0.2em;
+    cursor: pointer;
+}
+
+.menu-sky:hover {
+    color: #829E92;
+}
+
+.like  {
+    font-size: 1.6em;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 .quote-content {
@@ -281,6 +294,7 @@ input[name="choose-avatar"], .button-warn, .res-sub input, .one-click, .profil-u
     height: 2.4em;
     width: 20em;
     text-align: center;
+    cursor: pointer;
 }
 
 .res-sub {

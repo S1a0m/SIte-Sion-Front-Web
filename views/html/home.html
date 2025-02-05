@@ -19,9 +19,10 @@
             </div>
             <hr>
             <nav>
-                <img src="../icons/menu-c.svg" alt="" class="menu-sky">
+                <!--<img src="../icons/menu-c.svg" alt="" class="menu-sky">-->
+                <div class="menu-sky">&#9776;</div>
                 <span class="logo">Cite@Sion</span>
-                <img src="../icons/logout-c.svg" alt="">
+                <img src="../icons/logout-rn.svg" alt="Se déconnecter" title="Se déconnecter">
             </nav>
         </header>
         <main>
@@ -36,7 +37,8 @@
             <section class="quotes">
                 <article class="day quote">
                     <div class="quote-like">
-                        <img src="../icons/favorite-c.svg" alt="">
+                        <div class="like">&#9829;</div>
+                        <!--<img src="../icons/favorite-c.svg" alt="">-->
                         <span class="likes">25k likes</span>
                     </div>
                     <div class="quote-content">
@@ -61,7 +63,8 @@
                 <hr>
                 <article class="quote">
                     <div class="quote-like">
-                        <img src="../icons/favorite-c.svg" alt="">
+                        <div class="like">&#9829;</div>
+                        <!--<img src="../icons/favorite-c.svg" alt="">-->
                         <span class="likes">25k likes</span>
                     </div>
                     <div class="quote-content">
@@ -84,7 +87,8 @@
                 </article>
                 <article class="quote">
                     <div class="quote-like">
-                        <img src="../icons/favorite-c.svg" alt="">
+                        <div class="like">&#9829;</div>
+                        <!--<img src="../icons/favorite-c.svg" alt="">-->
                         <span class="likes">25k likes</span>
                     </div>
                     <div class="quote-content">
@@ -107,7 +111,8 @@
                 </article>
                 <article class="quote">
                     <div class="quote-like">
-                        <img src="../icons/favorite-c.svg" alt="">
+                        <div class="like">&#9829;</div>
+                        <!--<img src="../icons/favorite-c.svg" alt="">-->
                         <span class="likes">25k likes</span>
                     </div>
                     <div class="quote-content">
@@ -151,6 +156,10 @@
 
         document.querySelector("#comment").addEventListener("click", ()=> {
             document.querySelector("com-ments").setAttribute("show", "yes");
+        });
+
+        document.querySelector(".like").addEventListener("click", ()=> {
+            document.querySelector(".like").setAttribute("style", "color: #991d1d;");
         });
     </script>
 </body>

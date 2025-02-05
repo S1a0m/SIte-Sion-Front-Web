@@ -78,7 +78,7 @@ export class PopUpBase extends HTMLElement {
           border-style: solid;
           border-color: #faffe6;
           border-width: 0.64em;
-          /*transition: all 300ms ease-in-out;*/
+          transition: all 300ms ease-in-out;
         }
 
         .container:hover {
